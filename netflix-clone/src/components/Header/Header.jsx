@@ -5,13 +5,16 @@ import bellIcon from "../../assets/bell_icon.svg";
 import profileImage from "../../assets/profile_img.png";
 import caratIcon from "../../assets/caret_icon.svg";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <div className="header-container">
         <div className="header-logo-container">
-          <img src={logo} alt="Netflix Logo" className="netflix-logo" />
+          <Link to="/" className="header-links">
+            <img src={logo} alt="Netflix Logo" className="netflix-logo" />
+          </Link>
           <ul>
             <li>Home</li>
             <li>TV Shows</li>

@@ -25,6 +25,8 @@
 
 .cards-list .cards {
   position: relative;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .cards-list .cards p {

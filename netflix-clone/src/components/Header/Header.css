@@ -25,6 +25,10 @@
   width: 90px;
 }
 
+.header-links {
+  text-decoration: none;
+}
+
 .header-logo-container ul {
   display: flex;
   gap: 20px;

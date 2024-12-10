@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Cards from "../../assets/cards/Cards_data";
+import { Link } from "react-router-dom";
 import "./TitleCards.css";
 
 const TitleCards = ({ title, category }) => {
@@ -27,7 +27,6 @@ const TitleCards = ({ title, category }) => {
       const data = await response.json();
       if (response.ok) {
         setMoviesData(data.results);
-        console.log(data.results);
       }
     } catch (error) {
       console.log("Error on fetching movies list");
@@ -42,10 +41,6 @@ const TitleCards = ({ title, category }) => {
   useEffect(() => {
     cardsRef.current.addEventListener("wheel", handleWheel);
 
-    // Cleanup to avoid memory leaks
-    return () => {
-      cardsRef.current.removeEventListener("wheel", handleWheel);
-    };
   }, []);
 
   return (
@@ -53,13 +48,13 @@ const TitleCards = ({ title, category }) => {
       <h2>{title ? title : "Popular on Netflix"}</h2>
       <div className="cards-list" ref={cardsRef}>
         {moviesData.map((eachCard, index) => (
-          <div className="cards" key={index}>
+          <Link to={`/player/${eachCard.id}`} className="cards" key={index}>
             <img
               src={`https://image.tmdb.org/t/p/w500` + eachCard.backdrop_path}
               alt={eachCard.original_title}
             />
             <p>{eachCard.original_title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
