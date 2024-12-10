@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Header from "../Header/Header";
-import HeroBanner from "../../../public/hero_banner.jpg";
+import HeroBanner from "../../assets/hero_banner.jpg";
 import HeroTitle from "../../assets/hero_title.png";
 import PlayIcon from "../../assets/play_icon.png";
 import InfoIcon from "../../assets/info_icon.png";
 import TitleCards from "../TitleCards/TitleCards";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -36,10 +37,13 @@ const Home = () => {
         </div>
       </div>
       <div className="more-cards">
-        <TitleCards title={"Blockbuster Movies"} />
-        <TitleCards title={"Only on Netflix"} />
-        <TitleCards title={"Up Coming"} />
-        <TitleCards title={"Top pics for you"} />
+        <TitleCards title={"Blockbuster Movies"} category={"top_rated"} />
+        <TitleCards title={"Only on Netflix"} category={"popular"} />
+        <TitleCards title={"Up Coming"} category={"upcoming"} />
+        <TitleCards title={"Top pics for you"} category={"now_playing"} />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );
