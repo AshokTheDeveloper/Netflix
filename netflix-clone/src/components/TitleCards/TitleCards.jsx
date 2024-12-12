@@ -13,7 +13,7 @@ const TitleCards = ({ title, category }) => {
   const getMovies = async () => {
     const apiUrl = `https://api.themoviedb.org/3/movie/${
       category ? category : "now_playing"
-    }?language=en-US&page=2`;
+    }?language=en-US&page=1`;
     const options = {
       method: "GET",
       headers: {

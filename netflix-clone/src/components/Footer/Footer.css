@@ -6,12 +6,12 @@
 
 .footer-icon-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 40px 0;
 }
 
 .footer-icon-container img {
-  width: 30px;
+  width: 20px;
   cursor: pointer;
 }
 
@@ -26,4 +26,32 @@
 .copyright-text {
   color: gray;
   font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .footer-icon-container img {
+    width: 25px;
+  }
+
+  .footer-container ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footer-icon-container img {
+    width: 22px;
+  }
+
+  .footer-container ul {
+    font-size: 12px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+  }
 }

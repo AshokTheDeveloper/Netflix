@@ -1,16 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search_icon.svg";
 import bellIcon from "../../assets/bell_icon.svg";
 import profileImage from "../../assets/profile_img.png";
 import caratIcon from "../../assets/caret_icon.svg";
 import "./Header.css";
-import { Link } from "react-router-dom";
 
 const Header = () => {
+  const headerRef = useRef();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(headerRef.current);
+      if (headerRef.current) {
+        if (window.scrollY >= 80) {
+          headerRef.current.classList.add("header-dark");
+        } else {
+          headerRef.current.classList.remove("header-dark");
+        }
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+
+  const signoutHandle = () => {
+    Cookies.remove("jwt_token");
+    navigate("/login");
+  };
+
   return (
     <>
-      <div className="header-container">
+      <div className="header-container" ref={headerRef}>
         <div className="header-logo-container">
           <Link to="/" className="header-links">
             <img src={logo} alt="Netflix Logo" className="netflix-logo" />
@@ -35,7 +64,9 @@ const Header = () => {
             />
             <img src={caratIcon} alt="caret_image" />
             <div className="dropdown">
-              <p>Sign out of netflix</p>
+              <button type="button" onClick={signoutHandle}>
+                Sign out of netflix
+              </button>
             </div>
           </div>
         </div>

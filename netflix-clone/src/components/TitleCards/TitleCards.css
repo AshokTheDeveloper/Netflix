@@ -34,3 +34,37 @@
   bottom: 10px;
   right: 10px;
 }
+
+@media (max-width: 800px) {
+  .title-cards-container {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .title-cards-container h2 {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .cards img {
+    width: 200px;
+  }
+
+  .cards p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-cards-container h2 {
+    font-size: 15px;
+  }
+
+  .cards img {
+    width: 165px;
+  }
+
+  .cards p {
+    font-size: 10px;
+  }
+}

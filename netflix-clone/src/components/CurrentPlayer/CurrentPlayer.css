@@ -1,0 +1,19 @@
+.play-now-player-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-now-player-container img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.play-now-player-container iframe {
+  border-radius: 10px;
+}
