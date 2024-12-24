@@ -39,7 +39,7 @@ const SignUp = () => {
       password,
     };
 
-    const apiUrl = "http://localhost:3000/netflix/signup";
+    const apiUrl = "https://netflix-clone-backend-lnpu.onrender.com/netflix/signup";
     const options = {
       method: "POST",
       headers: {
