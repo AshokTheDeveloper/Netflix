@@ -1,7 +1,6 @@
 .hero {
   position: relative;
   background: #000000;
-  min-height: 100vh;
 }
 
 .hero-banner-image {
@@ -13,8 +12,8 @@
 .hero-caption {
   position: absolute;
   width: 100%;
-  padding-left: 4%;
   bottom: 0;
+  padding-left: 4%;
 }
 
 .caption-image {
@@ -66,6 +65,12 @@
 }
 
 @media (max-width: 1024px) {
+  .hero-caption {
+    padding-left: 2%;
+    position: absolute;
+    top: 340px;
+  }
+
   .hero-caption .title-cards {
     display: none;
     top: 0;
@@ -75,14 +80,12 @@
   }
 }
 
-@media (max-width: 800px) {
-  .hero {
-    min-height: 70vh;
-  }
-
+@media (max-width: 768px) {
   .hero-caption {
     padding-left: 2%;
-    top: 200px;
+    position: absolute;
+    top: 380px;
+    max-height: 100px;
   }
 
   .caption-image {
@@ -91,6 +94,7 @@
   }
 
   .hero-caption p {
+    display: none;
     margin-bottom: 10px;
     font-size: 12px;
     max-width: 360px;
@@ -114,19 +118,14 @@
 }
 
 @media (max-width: 500px) {
-  .caption-image {
-    display: none;
-  }
-
   .hero-caption {
+    position: absolute;
+    top: 150px;
     padding-left: 2%;
   }
 
   .hero-buttons .hero-button img {
     width: 15px;
-  }
-
-  .hero-button {
   }
 
   .hero-buttons .hero-button {

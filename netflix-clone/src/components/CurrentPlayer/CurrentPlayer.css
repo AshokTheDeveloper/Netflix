@@ -16,4 +16,22 @@
 
 .play-now-player-container iframe {
   border-radius: 10px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .play-now-player-container iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 40%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .play-now-player-container iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+  }
 }

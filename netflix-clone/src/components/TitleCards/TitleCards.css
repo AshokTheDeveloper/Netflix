@@ -35,7 +35,7 @@
   right: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .title-cards-container {
     margin-top: 20px;
     margin-bottom: 0;
