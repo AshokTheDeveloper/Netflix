@@ -1,12 +1,14 @@
 .login-container {
-  min-height: 100vh;
+  height: 100vh;
   background-image: linear-gradient(#0000007e, #0000007e),
     url("/background_banner.jpg");
-  padding: 20px 8%;
+  position: relative;
 }
 
 .login-logo {
   width: 150px;
+  margin-left: 18px;
+  margin-top: 18px;
 }
 
 .login-form-container {
@@ -15,7 +17,10 @@
   background: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   padding: 50px;
-  margin: auto auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-form-container h1 {
@@ -99,14 +104,11 @@
   color: #e50914;
 }
 
-@media (max-width: 800px) {
-  .login-container {
-    padding: 20px 4%;
-  }
-
+@media (max-width: 768px) {
   .login-logo {
     width: 120px;
-    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-top: 18px;
   }
 
   .login-form-container h1 {
@@ -146,10 +148,6 @@
 }
 
 @media (max-width: 500px) {
-  .login-container {
-    padding: 20px 4%;
-  }
-
   .login-form-container h1 {
     font-size: 26px;
     margin-bottom: 28px;

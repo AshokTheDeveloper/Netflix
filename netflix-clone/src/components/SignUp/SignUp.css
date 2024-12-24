@@ -1,14 +1,16 @@
 .signup-container {
-  min-height: 100vh;
   background-image: linear-gradient(#0000007e, #0000007e),
     url("/background_banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px 4%;
+  height: 100vh;
+  position: relative;
 }
 
 .signup-logo {
   width: 150px;
+  margin-left: 18px;
+  margin-top: 18px;
 }
 
 .signup-form-container {
@@ -17,7 +19,10 @@
   background: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   padding: 44px 50px;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .signup-form-container h1 {
@@ -101,14 +106,11 @@
   color: #e50914;
 }
 
-@media (max-width: 800px) {
-  .signup-container {
-    padding: 16px 4%;
-  }
-
+@media (max-width: 768px) {
   .signup-logo {
     width: 120px;
-    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-top: 18px;
   }
 
   .signup-form-container h1 {
@@ -117,7 +119,7 @@
   }
 
   .signup-form-container {
-    max-width: 400px;
+    max-width: 380px;
     padding: 30px 40px;
   }
 
@@ -144,12 +146,10 @@
 }
 
 @media (max-width: 500px) {
-  .signup-container {
-    padding: 20px 4%;
-  }
-
   .signup-logo {
     width: 100px;
+    margin-left: 16px;
+    margin-top: 16px;
   }
 
   .signup-form-container {
