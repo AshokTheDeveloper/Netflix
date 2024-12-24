@@ -14,7 +14,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(headerRef.current);
       if (headerRef.current) {
         if (window.scrollY >= 80) {
           headerRef.current.classList.add("header-dark");
