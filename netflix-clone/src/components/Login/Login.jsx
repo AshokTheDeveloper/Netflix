@@ -40,7 +40,7 @@ const Login = () => {
       password,
     };
 
-    const apiUrl = "http://localhost:3000/netflix/signin";
+    const apiUrl = "https://netflix-clone-backend-lnpu.onrender.com/netflix/signin";
     const options = {
       method: "POST",
       headers: {
